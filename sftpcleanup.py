@@ -1,13 +1,13 @@
 ##########################
-#Author  : nvenkataramana@zeomega.com
-#Purpose : Cleans up the files older than 60 days in client upload folders on sftp01.zeomega.com in /ftphome parition
+
+#Purpose : Cleans up the files older than 60 days in client upload folders on  in /ftphome parition
 #########################
 #!/usr/bin/python
 import os, subprocess,datetime,shutil
 basedir = "/home/nvenkataramana/ftphome/"
 clients = [ client for client in os.listdir(basedir) if os.path.isdir(os.path.join(basedir,client)) and not os.path.islink(os.path.join(basedir,client))]
 #clients.remove("lost+found")
-#clients.remove("zeomega")
+#clients.remove("")
 """
 You can hardcode clients as well if you need to restrict cleanup to particluar clients 
 You need to uncomment below line and list your clients
